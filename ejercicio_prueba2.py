@@ -1,5 +1,6 @@
 import os, time
-trabajadores = []
+from funciones import *
+
 cargos=("CEO","DESARROLLADOR","ANALISTA")
 while True:
     os.system("cls")
@@ -11,22 +12,11 @@ while True:
     opc=int(input("Ingrese opción: "))
     os.system("cls")
     if opc ==1:
-        print("-----REGISTRO DE TRABAJADORES-----")
-        nombre_apellido =input("Ingrese Nombre y Apellido: ")
-        cargo = int(input("Ingrese cargo (1- CEO, 2- DESARROLLADOR, -3 ANALISTA): "))
-        sueldo_bruto=int(input("Ingrese sueldo bruto: "))
-        desc_salud= int(7/100 * sueldo_bruto)
-        desc_afp= int(12/100 *sueldo_bruto)
-        sueldo_liquido=int(sueldo_bruto-desc_salud-desc_afp)
-        trabajador =[nombre_apellido,cargos[cargo-1],sueldo_bruto,desc_salud,desc_afp,sueldo_liquido]
-        trabajadores.append(trabajador)
-        print("Trabajador agregaco con exitó...")    
-
+        registrar_trabajador()
     elif opc ==2:
         pass
     elif opc ==3:
         pass
     else:
-        print("Gracias...")
-        break
+        salida()
     time.sleep(3)    
