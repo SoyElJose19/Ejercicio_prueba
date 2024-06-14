@@ -14,7 +14,7 @@ while True:
     elif opc ==2:
         listar_trabajadores()
     elif opc ==3:
-        pass
+        exportar_archivo_txt
     else:
         salida()
     time.sleep(3)    
