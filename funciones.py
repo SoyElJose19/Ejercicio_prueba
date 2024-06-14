@@ -1,4 +1,5 @@
 trabajadores = []
+cargos=("CEO","DESARROLLADOR","ANALISTA")
 def registrar_trabajador():
     print("-----REGISTRO DE TRABAJADORES-----")
     nombre_apellido =input("Ingrese Nombre y Apellido: ")
@@ -12,7 +13,12 @@ def registrar_trabajador():
     print("Trabajador agregaco con exitó...")    
 
 def listar_trabajadores():
-    pass
+    if len(listar_trabajadores)==0:
+        print("lista vacia, registre un trabajador en la opción 1...")
+    else:
+        print("\tLista de trabajadores")
+        for t in trabajadores:
+            print(f"NOMBRE: {t[0]}\n CARGO: {t[1]} \nBRUTO: {t[2]} \nSALUD: {t[3]} \nAFP: {t[4]} \nLIQUIDO: {t[5]}")
 def exportar_archivo_txt():
     pass
 def salida():

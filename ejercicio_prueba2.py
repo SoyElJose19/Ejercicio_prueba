@@ -1,7 +1,5 @@
 import os, time
-from funciones import *
-
-cargos=("CEO","DESARROLLADOR","ANALISTA")
+from funciones import * 
 while True:
     os.system("cls")
     print("MENÚ TRABAJADORES")
@@ -14,7 +12,7 @@ while True:
     if opc ==1:
         registrar_trabajador()
     elif opc ==2:
-        pass
+        listar_trabajadores()
     elif opc ==3:
         pass
     else:
